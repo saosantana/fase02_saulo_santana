@@ -1,0 +1,98 @@
+/* CSS do navbar com menu de páginas */
+ul { 
+    background-color:#ddd333;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+  }
+  
+  li a {
+
+    text-decoration: none;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+  }
+    
+  li {
+    float: left;
+  }
+
+  /* Altera a cor para #111 ao passar o mouse sobre o botão */
+  li a:hover {
+    background-color: #111;
+  }
+
+  * {box-sizing:border-box}
+
+  /* Carrossel de Imagens */
+  .carrossel {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+
+  
+  /* CSS dos botões Anterior e Próximo */
+  .anterior, .prox {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Coloca o botão de próximo ao lado direito */
+  .prox {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* Ao passar o mouse sobre os botões de Anterior e Próximo o fundo fica preto */
+  .anterior:hover, .prox:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  /* CSS do número de posicionamento da imagem dentro do carrossel */
+  .posicao {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* CSS das bolinhas na parte inferior */
+  .circulos {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .circulos:hover {
+    background-color: #717171;
+  }
+  
+  /* Animação ao trocar de imagem */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
